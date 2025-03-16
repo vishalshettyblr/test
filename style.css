@@ -1,0 +1,184 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0e17;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation styles */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ccff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ccff;
+}
+
+/* Hero section */
+#hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900/?space');
+    background-size: cover;
+    background-position: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 0.8rem 2rem;
+    background-color: #00ccff;
+    color: #0a0e17;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 204, 255, 0.4);
+}
+
+/* Planet section */
+.planet-section {
+    padding: 5rem 10%;
+}
+
+.planet-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #00ccff;
+}
+
+.planet-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.planet-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.planet-card:hover {
+    transform: translateY(-10px);
+}
+
+.planet {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+}
+
+.mercury {
+    background: radial-gradient(circle at 30% 30%, #c0c0c0, #6a6a6a);
+}
+
+.venus {
+    background: radial-gradient(circle at 30% 30%, #e6b380, #b3752d);
+}
+
+.earth {
+    background: radial-gradient(circle at 30% 30%, #5588ff, #1a3366);
+}
+
+.mars {
+    background: radial-gradient(circle at 30% 30%, #ff6644, #992600);
+}
+
+.planet-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00ccff;
+}
+
+.planet-card p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    text-align: center;
+    color: #777777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .planet-cards {
+        justify-content: center;
+    }
+}
